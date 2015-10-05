@@ -22,6 +22,22 @@
 \pretolerance=10000
 \tolerance=10000
 
+%Configuración para la apariencia de definiciones y teoremas.
+\newtheoremstyle{mystyle}% name
+  {3pt}%Space above
+  {3pt}%Space below
+  {\normalfont}%Body font
+  {0pt}%Indent amount
+  {\itshape}% Theorem head font
+  {}%Punctuation after theorem head
+  {\newline}%Space after theorem head 2
+  {}%Theorem head spec (can be left empty, meaning ‘normal’)
+
+\theoremstyle{mystyle}
+\newtheorem{defi}{\textcolor{red}{\textbf{Definición}}}
+\newtheorem{teo}{\textcolor{blue}{\textbf{Teorema}}}
+
+
 \begin{document}
 \maketitle
 \tableofcontents
@@ -35,6 +51,36 @@ Además también resolveremos algunos problemas relacionados con las isometrías
 Seguiremos la estrutura presente en \cite{merino} para presentar estos conceptos ya que es un libro de uso muy extendido y de muy buena calidad.
 
 \section{Definición y ejemplos}
+
+\fbox{
+\begin{minipage}{\textwidth}
+
+\begin{defi}[Isometría]
+\label{defiisometria}
+Una aplicación lineal $f \, : \, V \rightarrow V'$ es \textbf{isometría} si, y sólo si, $\parallel v \parallel = \parallel f(v) \parallel$ para todo $v \in V$.
+\end{defi}
+\end{minipage}
+}
+\hfill \\
+
+Es claro que de esta definición podemos deducir que cualquier isometría es una aplicación inyectiva, para ello sólo tenemos que ver que el núcleo de la aplicación es el conjunto formado únicamente por el cero: Si $f(v) = 0 \Rightarrow \parallel v \parallel = \parallel f(v) \parallel = 0 \Rightarrow v = 0$ c.q.d.. Con lo cual si $V$ y $V'$ tienen la misma dimensión (en particular si $f$ es un endomorfismo), toda isometría de $V$ a $V'$ es un isomorfismo.\\
+
+A continuación vamos a ver una de las caracterizaciones más importante de las isometrías, como sabemos toda aplicación líneal tiene asociada una matriz, pues bien veamos qué propiedad tienen las matrices asociadas a isometrías:\\
+
+\fbox{
+\begin{minipage}{\textwidth}
+
+\begin{teo}[Caracterización de las isometrías]
+\label{teo1}
+Si $V$ es un espacio vectorial euclídeo de dimensión finita y $B$ es una base ortonormal de V, entonces un endomorfismo f  de $V$ es una isometría sii su matriz asociada respecto de $B$ es ortogonal.
+\end{teo}
+\end{minipage}
+}
+\hfill \\
+
+\textbf{DEMOSTRACIÓN:}\\
+
+
 
 
 
