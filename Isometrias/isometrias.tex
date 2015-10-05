@@ -40,7 +40,17 @@
 
 \begin{document}
 \maketitle
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=70mm]{escudo.jpeg}
+\end{figure}
+
+\newpage
+
 \tableofcontents
+
+\newpage
 
 \section{Introducción}
 
@@ -80,7 +90,15 @@ Si $V$ es un espacio vectorial euclídeo de dimensión finita y $B$ es una base 
 
 \textbf{DEMOSTRACIÓN:}\\
 
+Si $f$ es isometría y $A$ su matriz asociada respecto de B, entonces se verifica:\\
 
+\begin{center}
+$X^tIY = <x,y> = <f(x),f(y)> = (AX)^tI(AY) = X^t(A^tIA)Y$
+\end{center}
+
+donde $X$ e $Y$ representan las coordenadas de los vectores de x e y respecto de la base B. Como esto se da para todo par de vectores, entonces tenemos que $A^tA = I$ y con lo cual $A$ es ortogonal. El recíproco es evidente. $\blacksquare$
+
+\section{Isometrías en $\mathbb{R}^3$}
 
 
 
