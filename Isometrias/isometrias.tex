@@ -100,7 +100,82 @@ donde $X$ e $Y$ representan las coordenadas de los vectores de x e y respecto de
 
 \section{Isometrías en $\mathbb{R}^3$}
 
+A continuación vamos a estudiar los diferentes tipos de isometrías que hay en el espacio vectorial euclídeo $\mathbb{R}^3$.\\
 
+\subsection{Giro de ángulo $\alpha$ respecto de una recta}
+
+Vamos a considerar una base ortonormal de $\mathbb{R}^3$ compuesta por dos vectores $a$ y $b$ en el plano perpendicular al eje de giro y un vector $n$ perteneciente al eje de giro ($n = axb$). La matriz asociada al giro de ángulo $\alpha$ respecto a la recta de vector director $n$ sería:\\
+
+\[
+A=A_{\alpha}=
+\begin{bmatrix}
+\cos(\alpha) & -\sin(\alpha) & 0 \\
+\sin(\alpha) &  \cos(\alpha)  & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}
+\]
+
+
+Algunas propiedades que observamos de la matriz anterior:\\ 
+
+\begin{enumerate}
+	\item 
+	Las filas y columnas de $A$ forman una base ortonormal de $\mathbb{R}^3$, lo cual es consistente con que $A$ es una matriz ortogonal
+	
+	\item
+	
+	El giro respecto de una recta en $\mathbb{R}^3$ es una isometría directa, esto es, con determinante -1 (el determinante no depende de la base escogida).
+	
+	\item
+	
+	La composición de giros respecto de una misma recta es también un giro. Además, si $\alpha$ y $\beta$ son ángulos, se cumplen las propiedades:
+	
+	\begin{enumerate}
+		\item
+		$A_{\alpha} A_{\beta} = A_{\alpha+\beta}$
+		\item
+		$A_{\alpha} A_{-\alpha} = I $
+		\item
+		$A_{\alpha}^{-1} = A_{-\alpha}$
+	\end{enumerate}
+	
+	\item
+	
+	El eje de giro es un subespacio propio de valor propio asociado $\lambda = 1$, dado que los vectores del eje de giro se quedan invariantes.
+	
+	\item
+	
+	El plano perpendicular al eje de giro es un subespacio invariante, por lo que la imagen de
+	un vector de ese plano permanece en ese plano.
+	
+	\item
+	
+	Para $\alpha = 0$ tenemos la matriz identidad.
+	
+\end{enumerate}
+
+\subsection{Simetría respecto de una recta}
+
+Es un caso particular del tipo de isometría anterior tomando como ángulo $\alpha = \pi$. La matriz en este caso sería  
+\[
+A=
+\begin{bmatrix}
+-1 & 0 & 0 \\
+0 &  -1  & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\]
+
+
+Se verifica que 
+
+\begin{enumerate}
+	\item
+	$ A_\pi A_\pi = I $
+	\item
+	$ A_\pi = A_{\pi}^{-1} $
+		
+\end{enumerate}
 
 \newpage
 %Bibliografia
