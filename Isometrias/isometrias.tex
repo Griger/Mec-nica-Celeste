@@ -54,11 +54,11 @@
 
 \section{Introducción}
 
-A lo largo de este trabajo veremos un tipo muy particular de aplicaciones lineales, las isometrías. Que como sabemos en esencia son funciones que conservan distancias en espacios vectoriales euclídeos. Haremos un repaso de las isometrías en $\mathbb{R}^3$ viendo las matrices asociadas a cada una de ellas.\\
+A lo largo de este trabajo veremos un tipo muy particular de aplicaciones lineales: las isometrías. Como sabemos, en esencia son funciones que conservan distancias en espacios vectoriales euclídeos. Haremos un repaso de las isometrías en $\mathbb{R}^3$ viendo las matrices asociadas a cada una de ellas.\\
 
-Además también resolveremos algunos problemas relacionados con las isometrías con el objetivo final de dar un repaso general a estas aplicaciones que nos será de utilidad a lo largo de la asignatura.\\
+Además, también resolveremos algunos problemas relacionados con las isometrías con el objetivo final de dar un repaso general a estas aplicaciones. Esto nos será de utilidad a lo largo de la asignatura.\\
 
-Seguiremos la estrutura presente en \cite{merino} para presentar estos conceptos ya que es un libro de uso muy extendido y de muy buena calidad.
+Seguiremos la estructura presente en \cite{merino}, un libro de uso muy extendido y de muy buena calidad, para presentar estos conceptos.
 
 \section{Definición y ejemplos}
 
@@ -67,22 +67,24 @@ Seguiremos la estrutura presente en \cite{merino} para presentar estos conceptos
 
 \begin{defi}[Isometría]
 \label{defiisometria}
-Una aplicación lineal $f \, : \, V \rightarrow V'$ es \textbf{isometría} si, y sólo si, $\parallel v \parallel = \parallel f(v) \parallel$ para todo $v \in V$.
+Una aplicación lineal $f \, : \, V \rightarrow V'$ es \textbf{isometría} si, y sólo si, $\lVert v \rVert = \lVert f(v) \rVert$ para todo $v \in V$.
 \end{defi}
 \end{minipage}
 }
 \hfill \\
 
-Es claro que de esta definición podemos deducir que cualquier isometría es una aplicación inyectiva, para ello sólo tenemos que ver que el núcleo de la aplicación es el conjunto formado únicamente por el cero: Si $f(v) = 0 \Rightarrow \parallel v \parallel = \parallel f(v) \parallel = 0 \Rightarrow v = 0$ c.q.d.. Con lo cual si $V$ y $V'$ tienen la misma dimensión (en particular si $f$ es un endomorfismo), toda isometría de $V$ a $V'$ es un isomorfismo.\\
+De esta definición podemos deducir que cualquier isometría es una aplicación inyectiva. Para ello sólo tenemos que ver que el núcleo de la aplicación es el conjunto formado únicamente por el cero: Si $f(v) = 0 \implies \lVert v \rVert= \lVert f(v) \rVert = 0 \implies v = 0$, c.q.d.
 
-A continuación vamos a ver una de las caracterizaciones más importante de las isometrías, como sabemos toda aplicación líneal tiene asociada una matriz, pues bien veamos qué propiedad tienen las matrices asociadas a isometrías:\\
+Por tanto, si $V$ y $V'$ tienen la misma dimensión (en particular si $f$ es un endomorfismo), toda isometría de $V$ a $V'$ es un isomorfismo.\\
+
+A continuación vamos a ver una de las caracterizaciones más importante de las isometrías: como sabemos, toda aplicación líneal tiene asociada una matriz; pues bien, veamos qué propiedad tienen las matrices asociadas a isometrías:\\
 
 \fbox{
 \begin{minipage}{\textwidth}
 
 \begin{teo}[Caracterización de las isometrías]
 \label{teo1}
-Si $V$ es un espacio vectorial euclídeo de dimensión finita y $B$ es una base ortonormal de V, entonces un endomorfismo f  de $V$ es una isometría sii su matriz asociada respecto de $B$ es ortogonal.
+Si $V$ es un espacio vectorial euclídeo de dimensión finita y $B$ es una base ortonormal de V, entonces un endomorfismo f  de $V$ es una isometría si, y sólo si, su matriz asociada respecto de $B$ es ortogonal.
 \end{teo}
 \end{minipage}
 }
@@ -96,7 +98,7 @@ Si $f$ es isometría y $A$ su matriz asociada respecto de B, entonces se verific
 $X^tIY = <x,y> = <f(x),f(y)> = (AX)^tI(AY) = X^t(A^tIA)Y$
 \end{center}
 
-donde $X$ e $Y$ representan las coordenadas de los vectores de x e y respecto de la base B. Como esto se da para todo par de vectores, entonces tenemos que $A^tA = I$ y con lo cual $A$ es ortogonal. El recíproco es evidente. $\blacksquare$
+donde $X$ e $Y$ representan las coordenadas de los vectores de x e y respecto de la base B. Como esto se da para todo par de vectores, entonces tenemos que $A^tA = I$, con lo cual $A$ es ortogonal. El recíproco es evidente. $\blacksquare$
 
 \section{Isometrías en $\mathbb{R}^3$}
 
@@ -120,15 +122,15 @@ Algunas propiedades que observamos de la matriz anterior:\\
 
 \begin{enumerate}
 	\item 
-	Las filas y columnas de $A$ forman una base ortonormal de $\mathbb{R}^3$, lo cual es consistente con que $A$ es una matriz ortogonal
+	Las filas y columnas de $A$ forman una base ortonormal de $\mathbb{R}^3$, lo cual es consistente con que $A$ es una matriz ortogonal.
 	
 	\item
 	
-	El giro respecto de una recta en $\mathbb{R}^3$ es una isometría directa, esto es, con determinante -1 (el determinante no depende de la base escogida).
+	El giro respecto de una recta en $\mathbb{R}^3$ es una isometría directa; esto es, con determinante -1 (el determinante no depende de la base escogida).
 	
 	\item
 	
-	La composición de giros respecto de una misma recta es también un giro. Además, si $\alpha$ y $\beta$ son ángulos, se cumplen las propiedades:
+	La composición de giros respecto de una misma recta es también un giro. Además, si $\alpha$ y $\beta$ son ángulos, se cumplen las siguientes propiedades:
 	
 	\begin{enumerate}
 		\item
@@ -141,7 +143,7 @@ Algunas propiedades que observamos de la matriz anterior:\\
 	
 	\item
 	
-	El eje de giro es un subespacio propio de valor propio asociado $\lambda = 1$, dado que los vectores del eje de giro se quedan invariantes.
+	El eje de giro es un subespacio propio de valor propio asociado $\lambda = 1$, ya que los vectores del eje de giro se quedan invariantes.
 	
 	\item
 	
