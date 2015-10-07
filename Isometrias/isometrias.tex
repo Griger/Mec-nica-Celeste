@@ -225,6 +225,39 @@ Ahora, si $det(A-I) \neq 0$ entonces por \ref{prop1} tenemos que $det(A+I) = 0$ 
 \item Si $dimV_{-f} = 2$, entonces podemos tomar una base ortonormal $B' = \lbrace v_1,v_2,v_3 \rbrace$ en la que $v_1,v_2 \in V_{-f}$ y por tanto $f(v_3)$ es perpendicular a ambos, es decir, $f(v_3) = cv_3$ y como $v_3 \notin V_{-f}$ entonces c = 1 con lo que estaríamos en el caso det(A-I) = 0, previamente analizado.
 \item Si $dimV_{-f} = 3$ la aplicación es la \textbf{-I}.
 \end{enumerate}
+
+
+\section{Ejercicio}
+
+El siguiente ejercicio se encuentra planteado en [2, p. 19]:\\
+
+\fbox{
+\begin{minipage}{\textwidth}
+
+Demuestra que dados dos planos $\pi$ y $\pi '$ que pasan por el origen, siempre existe una matriz $ A \, \in \mathcal{O} (3)$ tal que $A \pi \, = \, \pi '$. ¿Cuántas?
+
+\end{minipage}
+}
+\hfill\\
+
+\textbf{SOLUCIÓN:}\\
+
+Dejaremos aparte el caso trivial de que ambos planos, $\pi$ y $\pi '$, sean iguales. Siendo así, sabemos que por tener un punto en común, los planos se cortan en una recta. En nuestro caso, la recta además pasa por el origen, pues sabemos que este punto pertenece a la intersección de los planos.\\
+
+Siendo r la recta en la que se cortan $\pi$ y $\pi '$, que pasa por el origen. Es claro que una rotación entorno al eje r, nos puede llevar $\pi$ en $\pi '$. Sean $\vec{n}$ y $\vec{n'}$ los vectores normales de $\pi$ y $\pi '$ respectivamente. Entonces el ángulo de rotación será:\\
+
+\[
+\ \cos \alpha \, = \, \dfrac{<\vec{n},\vec{n'}>}{\|\vec{n}\|\|\vec{n'}\|}
+\]\\
+
+Por tanto, existe una isometría que nos lleva $\pi$ en $\pi '$, la rotación de ángulo $\alpha$ entorno a r.\\
+
+En cuanto a la cantidad de isometrías que pueden hacer esto, primero tenemos que ver que la composición de isometrías es isometría. Pero esto es muy sencillo desde un punto de vista matricial, pues sabemos que las matrices ortogonales forman un grupo con las multiplicación.\\
+
+Una vez hemos visto esto, la idea es aplicar la isometría indicada arriba, y después aplicar una segunda isometría que nos deje $\pi '$ en $\pi '$. Por ejemplo, las rotaciones de cualquier ángulo entorno al eje que tiene como dirección $\vec{n'}$, la normal del plano $\pi '$.\\
+
+Por tanto, tenemos infinitas isometrías distintas que nos llevan $\pi$ en $\pi '$.\\
+
 \newpage
 %Bibliografia
 \nocite{*}
