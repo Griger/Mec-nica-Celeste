@@ -54,12 +54,11 @@
 
 \section{Introducción}
 
-A lo largo de este trabajo veremos un tipo muy particular de aplicaciones lineales, las isometrías. Que como sabemos en esencia son funciones que conservan distancias en espacios vectoriales euclídeos. Haremos un repaso de las isometrías en $\mathbb{R}^3$ viendo las matrices asociadas a cada una de ellas.\\
+A lo largo de este trabajo veremos un tipo muy particular de aplicaciones lineales: las isometrías. Como sabemos, en esencia no son más que funciones que conservan distancias en espacios vectoriales euclídeos. Haremos un repaso de las isometrías en $\mathbb{R}^3$, viendo las matrices asociadas a cada una de ellas.\\
 
-Además también resolveremos algunos problemas relacionados con las isometrías con el objetivo final de dar un repaso general a estas aplicaciones que nos será de utilidad a lo largo de la asignatura.\\
+Además, resolveremos algunos problemas relacionados con las isometrías. Nuestro objetivo final es dar un repaso general de estas aplicaciones que nos será de utilidad a lo largo de la asignatura.\\
 
-Seguiremos la estrutura presente en \cite{merino} para presentar estos conceptos ya que es un libro de uso muy extendido y de muy buena calidad.
-
+Seguiremos la estructura presente en \cite{merino}, un libro de uso muy extendido y de muy buena calidad, para presentar estos conceptos.
 \section{Definición y ejemplos}
 
 \fbox{
@@ -67,22 +66,22 @@ Seguiremos la estrutura presente en \cite{merino} para presentar estos conceptos
 
 \begin{defi}[Isometría]
 \label{defiisometria}
-Una aplicación lineal $f \, : \, V \rightarrow V'$ es \textbf{isometría} si, y sólo si, $\parallel v \parallel = \parallel f(v) \parallel$ para todo $v \in V$.
+Una aplicación lineal $f \, : \, V \to V'$ es \textbf{isometría} si, y sólo si, $\lVert v \rVert = \lVert f(v) \rVert$ para todo $v \in V$.
 \end{defi}
 \end{minipage}
 }
 \hfill \\
 
-Es claro que de esta definición podemos deducir que cualquier isometría es una aplicación inyectiva, para ello sólo tenemos que ver que el núcleo de la aplicación es el conjunto formado únicamente por el cero: Si $f(v) = 0 \Rightarrow \parallel v \parallel = \parallel f(v) \parallel = 0 \Rightarrow v = 0$ c.q.d.. Con lo cual si $V$ y $V'$ tienen la misma dimensión (en particular si $f$ es un endomorfismo), toda isometría de $V$ a $V'$ es un isomorfismo.\\
+Es claro que de esta definición podemos deducir que cualquier isometría es una aplicación inyectiva. Para ello sólo tenemos que ver que el núcleo de la aplicación es el conjunto formado únicamente por el cero: si $f(v) = 0 \implies \lVert v \rVert= \lVert f(v) \rVert = 0 \implies v = 0$, c.q.d. Por tanto, si $V$ y $V'$ tienen la misma dimensión ---en particular si $f$ es un endomorfismo---, toda isometría de $V$ a $V'$ es un isomorfismo.\\
 
-A continuación vamos a ver una de las caracterizaciones más importante de las isometrías, como sabemos toda aplicación líneal tiene asociada una matriz, pues bien veamos qué propiedad tienen las matrices asociadas a isometrías:\\
+A continuación vamos a ver una de las caracterizaciones más importante de las isometrías. Como sabemos, toda aplicación lineal tiene asociada una matriz; veamos entonces qué propiedad tienen las matrices asociadas a isometrías:\\
 
 \fbox{
 \begin{minipage}{\textwidth}
 
 \begin{teo}[Caracterización de las isometrías]
 \label{teo1}
-Si $V$ es un espacio vectorial euclídeo de dimensión finita y $B$ es una base ortonormal de V, entonces un endomorfismo f  de $V$ es una isometría sii su matriz asociada respecto de $B$ es ortogonal.
+Si $V$ es un espacio vectorial euclídeo de dimensión finita y $B$ es una base ortonormal de V, entonces un endomorfismo $f$  de $V$ es una isometría si, y sólo si, su matriz asociada respecto de $B$ es ortogonal.
 \end{teo}
 \end{minipage}
 }
@@ -96,17 +95,17 @@ Si $f$ es isometría y $A$ su matriz asociada respecto de B, entonces se verific
 $X^tIY = <x,y> = <f(x),f(y)> = (AX)^tI(AY) = X^t(A^tIA)Y$
 \end{center}
 
-donde $X$ e $Y$ representan las coordenadas de los vectores de x e y respecto de la base B. Como esto se da para todo par de vectores, entonces tenemos que $A^tA = I$ y con lo cual $A$ es ortogonal. El recíproco es evidente. $\blacksquare$\\
+donde $X$ e $Y$ representan las coordenadas de los vectores de x e y respecto de la base B. Como esto se da para todo par de vectores, entonces tenemos que $A^tA = I$, con lo cual $A$ es ortogonal. El recíproco es evidente. $\blacksquare$\\
 
-Dada una isometría en un $V$ podemos considerar el conjunto de los vectores que se mantienen invariantes por la isometría, esto es:\\
+Dada una isometría en un espacio vectorial $V$, podemos considerar el conjunto de los vectores que se mantienen invariantes por la isometría; esto es:\\
 
 \begin{center}
 $V_f = \lbrace v \in V \vert f(v) = v \rbrace$
 \end{center}
 
-que evidentemente es un subespacio vectorial de $V$. Si $A$ es la matriz asociada a $f$, entonces un vector $X$ está en $V_f$ sii $(AX = X) \Longleftrightarrow (A-I)X = 0$, lo que da lugar a un sistema homogéneo con matriz de coeficientes $A-I$ y por lo tanto $dim V_f = n - rango(A-I)$.\\
+que, evidentemente, es un subespacio vectorial de $V$. Si $A$ es la matriz asociada a $f$, entonces un vector $X$ está en $V_f$ sii $(AX = X) \Longleftrightarrow (A-I)X = 0$, lo que da lugar a un sistema homogéneo con matriz de coeficientes $A-I$. Por lo tanto, $dim V_f = n - rango(A-I)$.\\
 
-Del mismo modo podemos definir el conjunto $V_{-f} = \lbrace v \in V \vert f(v) = -v \rbrace$  que mediante el mismo razonamiento que hemos hecho antes tenemos que da lugar al sistema homogéneo $(A+I)X = 0$.\\
+Del mismo modo podemos definir el conjunto $V_{-f} = \lbrace v \in V \vert f(v) = -v \rbrace$,  que mediante el mismo razonamiento que hemos hecho antes tenemos que da lugar al sistema homogéneo $(A+I)X = 0$.\\
 
 Vamos a probar ahora que en $\mathbb{R}^3$ al menos uno de los dos subespacios es no nulo.\\
 
@@ -123,9 +122,9 @@ Para una matriz ortogonal real de orden impar A, se verifica que $det(A-I) = 0$ 
 
 \textbf{DEMOSTRACIÓN:}\\
 
-En primer lugar observemos que si C es una matriz antisimétrica de orden impar, entonces det(C) = 0; en efecto, como $-C = C^t$ y $det(C) = det(C^t) = (-1)^ndet(C)$ y n es impar, entonces det(C) = det(-C) ergo det(C) = 0.\\
+En primer lugar observemos que si C es una matriz antisimétrica de orden impar, entonces det(C) = 0; en efecto, como $-C = C^t$, $det(C) = det(C^t) = (-1)^ndet(C)$ y n es impar, entonces det(C) = det(-C), ergo det(C) = 0.\\
 
-Ahora $(A-I)(A+I) = A^2 - I = A(A - A^t)$ pero $A-A^t$ es antisimétrica con lo cual tenemos que $det((A-I)(A+I)) = 0$ de donde deducimos lo que queremos.$\blacksquare$\\
+Ahora: $(A-I)(A+I) = A^2 - I = A(A - A^t)$, pero como $A-A^t$ es antisimétrica, tenemos que $det((A-I)(A+I)) = 0$, de donde deducimos lo que queremos.$\blacksquare$\\
 
 \section{Isometrías en $\mathbb{R}^3$}
 
@@ -153,7 +152,7 @@ Algunas propiedades que observamos de la matriz anterior:\\
 	
 	\item
 	
-	El giro respecto de una recta en $\mathbb{R}^3$ es una isometría directa, esto es, con determinante -1 (el determinante no depende de la base escogida).
+	El giro respecto de una recta en $\mathbb{R}^3$ es una isometría directa, esto es, con determinante 1 (el determinante no depende de la base escogida).
 	
 	\item
 	
@@ -208,7 +207,7 @@ Se verifica que
 
 \subsection{Simetría ortogonal respecto de un plano}
 
-Tomando una base ortonormal de $\mathbb{R}^3$ con los primero vectores a y b en el plano de simetría, y el tercer vector n en el eje ortogonal a él, la matriz asociada a esta base es:
+Tomando una base ortonormal de $\mathbb{R}^3$ con los primeros vectores a y b en el plano de simetría, y el tercer vector n en el eje ortogonal a él, la matriz asociada a esta base es:
 
 \[
 T=
@@ -228,11 +227,11 @@ Se tiene que:
 \item El eje ortogonal es el asociado al autovalor $\lambda = -1$
 \end{enumerate}
 
-\subsection{Clasificación:}
+\subsection{Clasificación}
 
-Sea $f:\mathbb{R} \rightarrow \mathbb{R}^3$ una aplicación líneal conservando el producto escalar, $B=\lbrace e_1,e_2,e_3 \rbrace$ una base ortonormal y llamemos A la matriz asociada a $f$ en la base $B$. Podemos distinguir entonces los siguientes casos:\\
+Sea $f:\mathbb{R} \to \mathbb{R}^3$ una aplicación líneal conservando el producto escalar, $B=\lbrace e_1,e_2,e_3 \rbrace$ una base ortonormal y llamemos A a la matriz asociada a $f$ en la base $B$. Podemos distinguir entonces los siguientes casos:\\
 
-Si det(A-I) = 0 $\Rightarrow$ existen vectores fijos no nulos. Clasificamos entonces según la dimensión del subespacio de vectores fijos:\\
+Si det(A-I) = 0 $\implies$ existen vectores fijos no nulos. Clasificamos entonces según la dimensión del subespacio de vectores fijos:\\
 
 \begin{enumerate}
 \item Si $dimV_f = 1$ tenemos un \textbf{giro de eje la recta $V_f$ y ángulo $\alpha$}.
@@ -244,7 +243,7 @@ Ahora, si $det(A-I) \neq 0$ entonces por \ref{prop1} tenemos que $det(A+I) = 0$ 
 
 \begin{enumerate}
 \item Si $dimV_f = 1$ entonces tenemos una \textbf{composición de una simetría respecto del plano perpendicular a la recta $V_f$ con el giro de eje dicha recta y ángulo $\alpha$.}
-\item Si $dimV_{-f} = 2$, entonces podemos tomar una base ortonormal $B' = \lbrace v_1,v_2,v_3 \rbrace$ en la que $v_1,v_2 \in V_{-f}$ y por tanto $f(v_3)$ es perpendicular a ambos, es decir, $f(v_3) = cv_3$ y como $v_3 \notin V_{-f}$ entonces c = 1 con lo que estaríamos en el caso det(A-I) = 0, previamente analizado.
+\item Si $dimV_{-f} = 2$, entonces podemos tomar una base ortonormal $B' = \lbrace v_1,v_2,v_3 \rbrace$ en la que $v_1,v_2 \in V_{-f}$ y por tanto $f(v_3)$ es perpendicular a ambos, es decir, $f(v_3) = cv_3$ y, como $v_3 \notin V_{-f}$, entonces c = 1, con lo que estaríamos en el caso det(A-I) = 0, previamente analizado.
 \item Si $dimV_{-f} = 3$ la aplicación es la \textbf{-I}.
 \end{enumerate}
 
@@ -265,7 +264,7 @@ Sea $x:I \to \mathbb{R}^3\ \{0\}$ un movimiento en un campo de fuerzas centrales
 \[
 \ddot{x} = f(\lVert x \rVert)\frac{x}{\lVert x \rVert},
 \]
-y sea $A \in \mathcal{O}(3)$ es una matriz ortogonal. Entonces
+y sea $A \in \mathcal{O}(3)$ una matriz ortogonal. Entonces
 \begin{align*}
 Ax : &I \to \mathbb{R}^3- \{0\}\\
 &t \mapsto Ax(t)
@@ -294,7 +293,7 @@ Por ser $x(t)$ solución, tenemos que
  \ddot{(Ax(t))} = Af(\lVert x(t) \rVert)\frac{x(t)}{\lVert x(t) \rVert}
  \end{align*}
  
-Ahora, teniendo en cuenta que $f(\lVert x(t) \rVert)$ una constante y la propiedad que define la isometría, $\lVert x \rVert = \lVert f(x) \rVert = \lVert Ax \rVert$ podemos escribir lo que sigue:
+Ahora, teniendo en cuenta que $f(\lVert x(t) \rVert)$ es una constante y que la isometría cumple la propiedad $\lVert x \rVert = \lVert f(x) \rVert = \lVert Ax \rVert$, podemos escribir lo que sigue:
 
 \[
 \ddot{(Ax(t))} = f(\lVert x(t) \rVert)\frac{Ax(t)}{\lVert x(t) \rVert} = f(\lVert Ax(t) \rVert)\frac{Ax(t)}{\lVert Ax(t) \rVert}
@@ -302,7 +301,7 @@ Ahora, teniendo en cuenta que $f(\lVert x(t) \rVert)$ una constante y la propied
 
 Concluimos entonces que $Ax$ es también solución. $\blacksquare$
 
-\subsection{Isometría entre planos con intersección no vacía.}
+\subsection{Isometría entre planos con intersección no vacía}
 
 El siguiente ejercicio se encuentra planteado en \cite{celeste}\\
 
@@ -319,13 +318,13 @@ Demuestra que dados dos planos $\pi$ y $\pi '$ que pasan por el origen, siempre 
 
 Dejaremos aparte el caso trivial de que ambos planos, $\pi$ y $\pi '$, sean iguales. Siendo así, sabemos que por tener un punto en común, los planos se cortan en una recta. En nuestro caso, la recta además pasa por el origen, pues sabemos que este punto pertenece a la intersección de los planos.\\
 
-Siendo r la recta en la que se cortan $\pi$ y $\pi '$, que pasa por el origen. Es claro que una rotación entorno al eje r, nos puede llevar $\pi$ en $\pi '$. Sean $\vec{n}$ y $\vec{n'}$ los vectores normales de $\pi$ y $\pi '$ respectivamente. Entonces el ángulo de rotación será:\\
+Sea r la recta en la que se cortan $\pi$ y $\pi '$, que pasa por el origen. Es claro que una rotación en torno al eje r nos puede llevar $\pi$ en $\pi '$. Sean $\vec{n}$ y $\vec{n'}$ los vectores normales de $\pi$ y $\pi '$ respectivamente. Entonces, el ángulo de rotación será:\\
 
 \[
 \ \cos \alpha \, = \, \dfrac{<\vec{n},\vec{n'}>}{\|\vec{n}\|\|\vec{n'}\|}
 \]\\
 
-Por tanto, existe una isometría que nos lleva $\pi$ en $\pi '$, la rotación de ángulo $\alpha$ entorno a r.\\
+Por tanto, existe una isometría que nos lleva $\pi$ en $\pi '$: la rotación de ángulo $\alpha$ entorno a r.\\
 
 En cuanto a la cantidad de isometrías que pueden hacer esto, primero tenemos que ver que la composición de isometrías es isometría. Pero esto es muy sencillo desde un punto de vista matricial, pues sabemos que las matrices ortogonales forman un grupo con las multiplicación.\\
 
