@@ -46,6 +46,11 @@
 \includegraphics[width=70mm]{escudo.jpeg}
 \end{figure}
 
+\begin{figure}
+\centering
+\url{https://github.com/Griger/MecanicaCeleste}
+\end{figure}
+
 \newpage
 
 \tableofcontents
@@ -210,7 +215,7 @@ Se verifica que
 Tomando una base ortonormal de $\mathbb{R}^3$ con los primeros vectores a y b en el plano de simetría, y el tercer vector n en el eje ortogonal a él, la matriz asociada a esta base es:
 
 \[
-T=
+A=
 \begin{bmatrix}
 1 & 0 & 0 \\
 0 &  1  & 0 \\
@@ -221,11 +226,44 @@ T=
 Se tiene que:
 
 \begin{enumerate}
-\item $TT^{t} = I$ es decir $T^{-1} = T^{t} = T$. Tiene como valores propios el 1 doble y el -1 simple.
+\item $AA^{t} = I$ es decir $A^{-1} = A^{t} = T$. Tiene como valores propios el 1 doble y el -1 simple.
 \item Es una isometría inversa, con determinante -1.
 \item El plano de simetría es el subespacio propio asociado al autovalor $\lambda = 1$.
 \item El eje ortogonal es el asociado al autovalor $\lambda = -1$
 \end{enumerate}
+
+\subsection{Simetría respecto del origen}
+Es la composición de un giro de ángulo $\alpha = \pi$ con la simetría respecto del plano perpendicular al eje de giro. El orden de la composición es indiferente.
+La matriz sería:
+
+\[
+A=
+\begin{bmatrix}
+-1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & -1
+\end{bmatrix} =
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & -1
+\end{bmatrix}
+\begin{bmatrix}
+-1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & 1
+\end{bmatrix} =
+\begin{bmatrix}
+-1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & -1
+\end{bmatrix}
+\]
 
 \subsection{Clasificación}
 
