@@ -14,7 +14,7 @@
 \usepackage[nonumberlist]{glossaries} %[toc,style=altlistgroup,hyperfirst=false] 
 %usar makeglossaries grafo para recompilar el archivo donde están los grafos y que así salga actualizado
 \author{Alejandro García Montoro \\ Serafín Moral García \\ Gustavo Rivas Gervilla \\ Luis Suárez Lloréns}
-\title{Isometrías líneales}
+\title{Isometrías lineales}
 \date{}
 
 %Configuración especial
@@ -248,8 +248,61 @@ Ahora, si $det(A-I) \neq 0$ entonces por \ref{prop1} tenemos que $det(A+I) = 0$ 
 \item Si $dimV_{-f} = 3$ la aplicación es la \textbf{-I}.
 \end{enumerate}
 
+\section{Aplicaciones en mecánica celeste}
 
-\section{Ejercicio}
+Describimos a continuación dos propiedades que nos permitirán estudiar con comodidad las soluciones de las ecuaciones diferenciales que la mecánica celeste nos plantea.
+
+\subsection{Isometrías aplicadas a soluciones de ecuaciones diferenciales}
+
+La siguiente proposición y demostración se encuentran en \cite{celeste}\\
+
+\fbox{
+\begin{minipage}{\textwidth}
+
+\begin{prop}[]
+\label{prop2}
+Sea $x:I \to \mathbb{R}^3\ \{0\}$ un movimiento en un campo de fuerzas centrales
+\[
+\ddot{x} = f(\lVert x \rVert)\frac{x}{\lVert x \rVert},
+\]
+y sea $A \in \mathcal{O}(3)$ es una matriz ortogonal. Entonces
+\begin{align*}
+Ax : &I \to \mathbb{R}^3- \{0\}\\
+&t \mapsto Ax(t)
+\end{align*}
+
+es también una solución.
+\end{prop}
+\end{minipage}
+}
+\hfill \\
+
+\textbf{DEMOSTRACIÓN:}\\
+
+La demostración de esta propiedad es clara dada la definición de isometría.\\
+
+Comprobemos que $Ax$ es solución estudiando si cumple la ecuación diferencial del campo de fuerzas centrales. Para ello, derivamos dos veces y manipulamos el resultado:
+
+\[
+\ddot{(Ax(t))} = A\ddot{x}(t)
+\]
+
+Por ser $x(t)$ solución, tenemos que
+
+ \begin{align*}
+ \ddot{x} = f(\lVert x \rVert)\frac{x}{\lVert x \rVert} \implies \\
+ \ddot{(Ax(t))} = Af(\lVert x(t) \rVert)\frac{x(t)}{\lVert x(t) \rVert}
+ \end{align*}
+ 
+Ahora, teniendo en cuenta que $f(\lVert x(t) \rVert)$ una constante y la propiedad que define la isometría, $\lVert x \rVert = \lVert f(x) \rVert = \lVert Ax \rVert$ podemos escribir lo que sigue:
+
+\[
+\ddot{(Ax(t))} = f(\lVert x(t) \rVert)\frac{Ax(t)}{\lVert x(t) \rVert} = f(\lVert Ax(t) \rVert)\frac{Ax(t)}{\lVert Ax(t) \rVert}
+\]\\
+
+Concluimos entonces que $Ax$ es también solución. $\blacksquare$
+
+\subsection{Isometría entre planos con intersección no vacía.}
 
 El siguiente ejercicio se encuentra planteado en \cite{celeste}\\
 
@@ -279,6 +332,13 @@ En cuanto a la cantidad de isometrías que pueden hacer esto, primero tenemos qu
 Una vez hemos visto esto, la idea es aplicar la isometría indicada arriba, y después aplicar una segunda isometría que nos deje $\pi '$ en $\pi '$. Por ejemplo, las rotaciones de cualquier ángulo entorno al eje que tiene como dirección $\vec{n'}$, la normal del plano $\pi '$.\\
 
 Por tanto, tenemos infinitas isometrías distintas que nos llevan $\pi$ en $\pi '$.\\
+
+\subsection{Conclusiones}
+¿Cuál es entonces la ventaja de las dos propiedades anteriores? ¿En qué nos pueden ayudar a la hora de estudiar mecánica celeste?\\
+
+La respuesta es clara: al poder \emph{mover} las soluciones como \emph{queramos}, y teniendo en cuenta que podemos \emph{intercambiar} cualesquiera dos planos que pasen por el origen, podemos llevarnos los movimientos de cualquier partícula en un campo de fuerzas centrales al plano que más nos convenga en cada caso ---normalmente, al plano $Z=0$---, pudiendo trabajar así en las coordenadas que nos sean más cómodas o naturales.\\
+
+Entonces, el problema de estudiar los movimientos de los cuerpos celestes en todo el Universo podemos \emph{reducirlo} a estudiarlo en un plano previamente definido. Las ventajas son claras.
 
 \newpage
 %Bibliografia
