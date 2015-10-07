@@ -206,6 +206,28 @@ Se verifica que
 		
 \end{enumerate}
 
+\subsection{Simetría ortogonal respecto de un plano}
+
+Tomando una base ortonormal de $\mathbb{R}^3$ con los primero vectores a y b en el plano de simetría, y el tercer vector n en el eje ortogonal a él, la matriz asociada a esta base es:
+
+\[
+T=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 &  1  & 0 \\
+0 & 0 & -1
+\end{bmatrix}
+\]
+
+Se tiene que:
+
+\begin{enumerate}
+\item $TT^{t} = I$ es decir $T^{-1} = T^{t} = T$. Tiene como valores propios el 1 doble y el -1 simple.
+\item Es una isometría inversa, con determinante -1.
+\item El plano de simetría es el subespacio propio asociado al autovalor $\lambda = 1$.
+\item El eje ortogonal es el asociado al autovalor $\lambda = -1$
+\end{enumerate}
+
 \subsection{Clasificación:}
 
 Sea $f:\mathbb{R} \rightarrow \mathbb{R}^3$ una aplicación líneal conservando el producto escalar, $B=\lbrace e_1,e_2,e_3 \rbrace$ una base ortonormal y llamemos A la matriz asociada a $f$ en la base $B$. Podemos distinguir entonces los siguientes casos:\\
