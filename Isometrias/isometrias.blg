@@ -6,45 +6,49 @@ Database file #1: biblio.bib
 Warning--can't use both author and editor fields in merino
 Warning--empty publisher in merino
 Warning--empty year in merino
-You've used 1 entry,
+Warning--empty author and editor in pdfIsoSera
+Warning--empty chapter and pages in pdfIsoSera
+Warning--empty publisher in pdfIsoSera
+Warning--empty year in pdfIsoSera
+You've used 2 entries,
             1791 wiz_defined-function locations,
-            449 strings with 3610 characters,
-and the built_in function-call counts, 186 in all, are:
-= -- 10
-> -- 8
+            452 strings with 3703 characters,
+and the built_in function-call counts, 322 in all, are:
+= -- 17
+> -- 9
 < -- 0
-+ -- 3
++ -- 4
 - -- 2
-* -- 15
-:= -- 32
-add.period$ -- 2
-call.type$ -- 1
+* -- 29
+:= -- 44
+add.period$ -- 3
+call.type$ -- 2
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 10
-empty$ -- 20
+cite$ -- 9
+duplicate$ -- 22
+empty$ -- 42
 format.name$ -- 2
-if$ -- 37
+if$ -- 68
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 2
-newline$ -- 7
+int.to.str$ -- 2
+missing$ -- 3
+newline$ -- 10
 num.names$ -- 1
-pop$ -- 8
+pop$ -- 18
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 3
+skip$ -- 6
 stack$ -- 0
 substring$ -- 0
-swap$ -- 2
+swap$ -- 3
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 3
+warning$ -- 7
 while$ -- 1
-width$ -- 2
-write$ -- 9
-(There were 3 warnings)
+width$ -- 3
+write$ -- 14
+(There were 7 warnings)

@@ -36,7 +36,7 @@
 \theoremstyle{mystyle}
 \newtheorem{defi}{\textcolor{red}{\textbf{Definición}}}
 \newtheorem{teo}{\textcolor{blue}{\textbf{Teorema}}}
-
+\newtheorem{prop}{\textcolor{green}{\textbf{Proposición}}}
 
 \begin{document}
 \maketitle
@@ -96,7 +96,36 @@ Si $f$ es isometría y $A$ su matriz asociada respecto de B, entonces se verific
 $X^tIY = <x,y> = <f(x),f(y)> = (AX)^tI(AY) = X^t(A^tIA)Y$
 \end{center}
 
-donde $X$ e $Y$ representan las coordenadas de los vectores de x e y respecto de la base B. Como esto se da para todo par de vectores, entonces tenemos que $A^tA = I$ y con lo cual $A$ es ortogonal. El recíproco es evidente. $\blacksquare$
+donde $X$ e $Y$ representan las coordenadas de los vectores de x e y respecto de la base B. Como esto se da para todo par de vectores, entonces tenemos que $A^tA = I$ y con lo cual $A$ es ortogonal. El recíproco es evidente. $\blacksquare$\\
+
+Dada una isometría en un $V$ podemos considerar el conjunto de los vectores que se mantienen invariantes por la isometría, esto es:\\
+
+\begin{center}
+$V_f = \lbrace v \in V \vert f(v) = v \rbrace$
+\end{center}
+
+que evidentemente es un subespacio vectorial de $V$. Si $A$ es la matriz asociada a $f$, entonces un vector $X$ está en $V_f$ sii $(AX = X) \Longleftrightarrow (A-I)X = 0$, lo que da lugar a un sistema homogéneo con matriz de coeficientes $A-I$ y por lo tanto $dim V_f = n - rango(A-I)$.\\
+
+Del mismo modo podemos definir el conjunto $V_{-f} = \lbrace v \in V \vert f(v) = -v \rbrace$  que mediante el mismo razonamiento que hemos hecho antes tenemos que da lugar al sistema homogéneo $(A+I)X = 0$.\\
+
+Vamos a probar ahora que en $\mathbb{R}^3$ al menos uno de los dos subespacios es no nulo.\\
+
+\fbox{
+\begin{minipage}{\textwidth}
+
+\begin{prop}[]
+\label{prop1}
+Para una matriz ortogonal real de orden impar A, se verifica que $det(A-I) = 0$ ó $det(A+I) = 0$.
+\end{prop}
+\end{minipage}
+}
+\hfill \\
+
+\textbf{DEMOSTRACIÓN:}\\
+
+En primer lugar observemos que si C es una matriz antisimétrica de orden impar, entonces det(C) = 0; en efecto, como $-C = C^t$ y $det(C) = det(C^t) = (-1)^ndet(C)$ y n es impar, entonces det(C) = det(-C) ergo det(C) = 0.\\
+
+Ahora $(A-I)(A+I) = A^2 - I = A(A - A^t)$ pero $A-A^t$ es antisimétrica con lo cual tenemos que $det((A-I)(A+I)) = 0$ de donde deducimos lo que queremos.$\blacksquare$\\
 
 \section{Isometrías en $\mathbb{R}^3$}
 
@@ -177,6 +206,25 @@ Se verifica que
 		
 \end{enumerate}
 
+\subsection{Clasificación:}
+
+Sea $f:\mathbb{R} \rightarrow \mathbb{R}^3$ una aplicación líneal conservando el producto escalar, $B=\lbrace e_1,e_2,e_3 \rbrace$ una base ortonormal y llamemos A la matriz asociada a $f$ en la base $B$. Podemos distinguir entonces los siguientes casos:\\
+
+Si det(A-I) = 0 $\Rightarrow$ existen vectores fijos no nulos. Clasificamos entonces según la dimensión del subespacio de vectores fijos:\\
+
+\begin{enumerate}
+\item Si $dimV_f = 1$ tenemos un \textbf{giro de eje la recta $V_f$ y ángulo $\alpha$}.
+\item Si $dimV_f = 2$ tenemos una \textbf{simetría respecto del plano $V_f$}.
+\item Si $dimV_f = 3$ tenemos la \textbf{identidad}.
+\end{enumerate}
+
+Ahora, si $det(A-I) \neq 0$ entonces por \ref{prop1} tenemos que $det(A+I) = 0$ y por lo tanto el espacio $V_{-f}$ es no nulo. Y entonces tenemos los siguientes casos:
+
+\begin{enumerate}
+\item Si $dimV_f = 1$ entonces tenemos una \textbf{composición de una simetría respecto del plano perpendicular a la recta $V_f$ con el giro de eje dicha recta y ángulo $\alpha$.}
+\item Si $dimV_{-f} = 2$, entonces podemos tomar una base ortonormal $B' = \lbrace v_1,v_2,v_3 \rbrace$ en la que $v_1,v_2 \in V_{-f}$ y por tanto $f(v_3)$ es perpendicular a ambos, es decir, $f(v_3) = cv_3$ y como $v_3 \notin V_{-f}$ entonces c = 1 con lo que estaríamos en el caso det(A-I) = 0, previamente analizado.
+\item Si $dimV_{-f} = 3$ la aplicación es la \textbf{-I}.
+\end{enumerate}
 \newpage
 %Bibliografia
 \nocite{*}
