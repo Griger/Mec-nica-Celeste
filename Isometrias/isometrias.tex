@@ -13,7 +13,7 @@
 \usepackage{cite} %paquete para que Latex contraiga las referencias [1-4] en lugar de [1][2][3][4]
 \usepackage[nonumberlist]{glossaries} %[toc,style=altlistgroup,hyperfirst=false] 
 %usar makeglossaries grafo para recompilar el archivo donde están los grafos y que así salga actualizado
-\usepackage[spanish, es-tabla]{babel}
+%\usepackage[spanish, es-tabla]{babel}
 \author{Alejandro García Montoro \\ Serafín Moral García \\ Gustavo Rivas Gervilla \\ Luis Suárez Lloréns}
 \title{Isometrías lineales}
 \date{}
@@ -60,12 +60,15 @@
 
 \section{Introducción}
 
-A lo largo de este trabajo veremos un tipo muy particular de aplicaciones lineales: las isometrías. Como sabemos, en esencia no son más que funciones que conservan distancias en espacios vectoriales euclídeos. Haremos un repaso de las isometrías en $\mathbb{R}^3$, viendo las matrices asociadas a cada una de ellas.\\
+A lo largo de este trabajo veremos un tipo muy particular de aplicaciones lineales: las isometrías. Como sabemos, en esencia no son más que funciones que conservan el producto escalar en espacios vectoriales euclídeos. Haremos un repaso de las isometrías en $\mathbb{R}^3$, viendo las matrices asociadas a cada una de ellas.\\
 
 Además, resolveremos algunos problemas relacionados con las isometrías. Nuestro objetivo final es dar un repaso general de estas aplicaciones que nos será de utilidad a lo largo de la asignatura.\\
 
 Seguiremos la estructura presente en \cite{merino}, un libro de uso muy extendido y de muy buena calidad, para presentar estos conceptos.
+
 \section{Definiciones}
+
+Dada una aplicación lineal $f \, : \, V \to V'$ entre espacios vectoriales euclídeos, diremos que es una isometría si conserva el producto escalar, esto es: $<x,y> \,  = \, <f(x),f(y)> \forall x,y \in \mathbb{R}^3$, vamos a ver una definición equivalente, que lo que viene a decirnos es que una aplicación es isometría sii conserva la norma:\\
 
 \fbox{
 \begin{minipage}{\textwidth}
@@ -77,6 +80,18 @@ Una aplicación lineal $f \, : \, V \to V'$ es \textbf{isometría} si, y sólo s
 \end{minipage}
 }
 \hfill \\
+
+Veamos que esta definición es equivalente a la primera:\\
+
+\textbf{DEMOSTRACIÓN:}\\
+
+Dados cualesquiera $x, y \in \mathbb{R}^3$ consideramos $v = x+y$ entonces dado que f conserva la normal por hipótesis y dada la línealidad tanto de la f como del producto escalar, tenemos que:\\
+
+$\lVert v \rVert^{2} = <x+y,x+y> = \lVert x \rVert^{2} + \lVert y \rVert^{2} + 2<x,y>$\\
+$\lVert f(v) \rVert^{2} = <f(x+y),f(x+y)> = \lVert f(x) \rVert^{2} + \lVert f(y) \rVert^{2} + 2<f(x,f(y)>$\\
+
+Igualando ambas expresiones (dado que f conserva la norma) y despejando, obtenemos la equivalencia que buscábamos.$\blacksquare$\\
+
 
 Es claro que de esta definición podemos deducir que cualquier isometría es una aplicación inyectiva. Para ello sólo tenemos que ver que el núcleo de la aplicación es el conjunto formado únicamente por el cero: si $f(v) = 0 \implies \lVert v \rVert= \lVert f(v) \rVert = 0 \implies v = 0$, c.q.d. Por tanto, si $V$ y $V'$ tienen la misma dimensión ---en particular si $f$ es un endomorfismo---, toda isometría de $V$ a $V'$ es un isomorfismo.\\
 
@@ -128,7 +143,7 @@ Para una matriz ortogonal real de orden impar A, se verifica que $det(A-I) = 0$ 
 
 \textbf{DEMOSTRACIÓN:}\\
 
-En primer lugar observemos que si C es una matriz antisimétrica de orden impar, entonces det(C) = 0; en efecto, como $-C = C^t$, $det(C) = det(C^t) = (-1)^ndet(C)$ y n es impar, entonces det(C) = det(-C), ergo det(C) = 0.\\
+En primer lugar observemos que si C es una matriz antisimétrica de orden impar, entonces det(C) = 0; en efecto, como $-C = C^t$, $det(C) = det(C^t) = (-1)^ndet(C)$ y n es impar, entonces det(C) = -det(C), ergo det(C) = 0.\\
 
 Ahora: $(A-I)(A+I) = A^2 - I = A(A - A^t)$, pero como $A-A^t$ es antisimétrica, tenemos que $det((A-I)(A+I)) = 0$, de donde deducimos lo que queremos.$\blacksquare$\\
 
