@@ -355,7 +355,7 @@ Ahora, teniendo en cuenta que $f(\lVert x(t) \rVert)$ es una constante y que la 
 
 Concluimos entonces que $Ax$ es también solución. $\blacksquare$
 
-\subsection{Isometrías entre planos con intersección no vacía}
+\subsection{Isometrías entre planos que contienen el origen}
 
 El siguiente ejercicio se encuentra planteado en \cite{celeste}\\
 
@@ -385,6 +385,34 @@ En cuanto a la cantidad de isometrías que pueden hacer esto, primero tenemos qu
 Una vez hemos visto esto, la idea es aplicar la isometría indicada arriba, y después aplicar una segunda isometría que nos deje $\pi '$ en $\pi '$. Por ejemplo, las rotaciones de cualquier ángulo entorno al eje que tiene como dirección $\vec{n'}$, la normal del plano $\pi '$.\\
 
 Por tanto, tenemos infinitas isometrías distintas que nos llevan $\pi$ en $\pi '$.\\
+
+Esto termina el ejercicio, pero vamos a añadir un par de aclaraciones al respecto.\\
+
+Primero, las rotaciones no son las únicas isometrías que dejan llevan un plano en si mismo. Por ejemplo, una simetría con respecto a un plano que contenga al vector normal del plano $\pi$ también lo llevaría a $\pi$. Este hecho no tiene ningún efecto para el ejercicio, pero puede resultar útil en su aplicación.\\
+
+Además de esto, veamos como construir la isometría que hemos comentado durante el ejercicio en la base canónica.\\
+
+Como ya hemos visto, la matriz de rotación es muy simple siempre que utilicemos la base correcta. Sabemos que queremos que el eje de simetría sea r. Por tanto la base sería: 
+\[
+\ \mathcal{B} = \{\vec{a},\vec{b},\vec{r}\}
+\]
+con $\vec{r}$ el vector dirección normalizado de r ---es el tercer vector de la base pues queremos que quede invariante por la rotación--- y $\vec{a}$ y $\vec{b}$ dos vectores cualquiera que hagan la base ortonormal.\\
+
+Así, la matriz de rotación A, en la base $\mathcal{B}$ sería simplemente:
+\[
+A=A_{\alpha}=
+\begin{bmatrix}
+\cos(\alpha) & -\sin(\alpha) & 0 \\
+\sin(\alpha) &  \cos(\alpha)  & 0 \\
+0 & 0 & 1 \\
+\end{bmatrix}
+\]\\
+
+Entonces, siendo $\mathcal{M}_{C,\mathcal{B}}$ la matriz de cambio de base de la base canónica a la base $\mathcal{B}$ y $\mathcal{M}_{\mathcal{B},C}$ la matriz de cambio de base de la base $\mathcal{B}$ a la base canónica, nuestra isometría F queda finalmente así:
+
+\[
+F\:=\:\mathcal{M}_{\mathcal{B},C}\:A\:\mathcal{M}_{C,\mathcal{B}}
+\]\\
 
 \subsection{Conclusiones}
 ¿Cuál es entonces la ventaja de las dos propiedades anteriores? ¿En qué nos pueden ayudar a la hora de estudiar mecánica celeste?\\
